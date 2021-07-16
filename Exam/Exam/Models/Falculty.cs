@@ -11,6 +11,6 @@ namespace Exam.Models
         [Key]
         public int FalcultyID { get; set; }
         [Required(ErrorMessage = "Please enter the right Falculty")]
-        public string Name { get; set; }
+        public string FalcultyName { get; set; }
     }
 }

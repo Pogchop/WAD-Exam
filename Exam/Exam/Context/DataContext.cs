@@ -20,5 +20,7 @@ namespace Exam.Context
         public System.Data.Entity.DbSet<Exam.Models.Test> Tests { get; set; }
 
         public System.Data.Entity.DbSet<Exam.Models.Falculty> Falculties { get; set; }
+
+        public System.Data.Entity.DbSet<Exam.Models.Status> Status { get; set; }
     }
 }

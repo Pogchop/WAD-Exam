@@ -18,7 +18,7 @@ namespace Exam.Controllers
         // GET: Test
         public ActionResult Index()
         {
-            var tests = db.Tests.Include(t => t.Classroom).Include(t => t.ExamSubject).Include(t => t.Falculty);
+            var tests = db.Tests.Include(t => t.Classroom).Include(t => t.ExamSubject).Include(t => t.Falculty).Include(t => t.Status);
             return View(tests.ToList());
         }
 
@@ -43,6 +43,7 @@ namespace Exam.Controllers
             ViewBag.ClassroomID = new SelectList(db.Classrooms, "ClassroomID", "Name");
             ViewBag.ExamSubjectID = new SelectList(db.ExamSubjects, "ExamSubjectID", "Name");
             ViewBag.FalcultyID = new SelectList(db.Falculties, "FalcultyID", "Name");
+            ViewBag.StatusID = new SelectList(db.Status, "Id", "StatusName");
             return View();
         }
 
@@ -51,7 +52,7 @@ namespace Exam.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Starttime,ExamDate,ExamDur,ClassroomID,ExamSubjectID,FalcultyID")] Test test)
+        public ActionResult Create([Bind(Include = "ID,Starttime,ExamDate,ExamDur,ClassroomID,ExamSubjectID,FalcultyID,StatusID")] Test test)
         {
             if (ModelState.IsValid)
             {
@@ -63,6 +64,7 @@ namespace Exam.Controllers
             ViewBag.ClassroomID = new SelectList(db.Classrooms, "ClassroomID", "Name", test.ClassroomID);
             ViewBag.ExamSubjectID = new SelectList(db.ExamSubjects, "ExamSubjectID", "Name", test.ExamSubjectID);
             ViewBag.FalcultyID = new SelectList(db.Falculties, "FalcultyID", "Name", test.FalcultyID);
+            ViewBag.StatusID = new SelectList(db.Status, "Id", "StatusName", test.StatusID);
             return View(test);
         }
 
@@ -81,6 +83,7 @@ namespace Exam.Controllers
             ViewBag.ClassroomID = new SelectList(db.Classrooms, "ClassroomID", "Name", test.ClassroomID);
             ViewBag.ExamSubjectID = new SelectList(db.ExamSubjects, "ExamSubjectID", "Name", test.ExamSubjectID);
             ViewBag.FalcultyID = new SelectList(db.Falculties, "FalcultyID", "Name", test.FalcultyID);
+            ViewBag.StatusID = new SelectList(db.Status, "Id", "StatusName", test.StatusID);
             return View(test);
         }
 
@@ -89,7 +92,7 @@ namespace Exam.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Starttime,ExamDate,ExamDur,ClassroomID,ExamSubjectID,FalcultyID")] Test test)
+        public ActionResult Edit([Bind(Include = "ID,Starttime,ExamDate,ExamDur,ClassroomID,ExamSubjectID,FalcultyID,StatusID")] Test test)
         {
             if (ModelState.IsValid)
             {
@@ -100,6 +103,7 @@ namespace Exam.Controllers
             ViewBag.ClassroomID = new SelectList(db.Classrooms, "ClassroomID", "Name", test.ClassroomID);
             ViewBag.ExamSubjectID = new SelectList(db.ExamSubjects, "ExamSubjectID", "Name", test.ExamSubjectID);
             ViewBag.FalcultyID = new SelectList(db.Falculties, "FalcultyID", "Name", test.FalcultyID);
+            ViewBag.StatusID = new SelectList(db.Status, "Id", "StatusName", test.StatusID);
             return View(test);
         }
 

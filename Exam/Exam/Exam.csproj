@@ -131,6 +131,7 @@
     <Compile Include="Controllers\ExamSubjectController.cs" />
     <Compile Include="Controllers\FalcultyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -138,6 +139,7 @@
     <Compile Include="Models\Classroom.cs" />
     <Compile Include="Models\ExamSubject.cs" />
     <Compile Include="Models\Falculty.cs" />
+    <Compile Include="Models\Status.cs" />
     <Compile Include="Models\Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -187,16 +189,21 @@
     <Content Include="Views\ExamSubject\Details.cshtml" />
     <Content Include="Views\ExamSubject\Edit.cshtml" />
     <Content Include="Views\ExamSubject\Index.cshtml" />
-    <Content Include="Views\Test\Create.cshtml" />
-    <Content Include="Views\Test\Delete.cshtml" />
-    <Content Include="Views\Test\Details.cshtml" />
-    <Content Include="Views\Test\Edit.cshtml" />
-    <Content Include="Views\Test\Index.cshtml" />
     <Content Include="Views\Falculty\Create.cshtml" />
     <Content Include="Views\Falculty\Delete.cshtml" />
     <Content Include="Views\Falculty\Details.cshtml" />
     <Content Include="Views\Falculty\Edit.cshtml" />
     <Content Include="Views\Falculty\Index.cshtml" />
+    <Content Include="Views\Status\Create.cshtml" />
+    <Content Include="Views\Status\Delete.cshtml" />
+    <Content Include="Views\Status\Details.cshtml" />
+    <Content Include="Views\Status\Edit.cshtml" />
+    <Content Include="Views\Status\Index.cshtml" />
+    <Content Include="Views\Test\Create.cshtml" />
+    <Content Include="Views\Test\Delete.cshtml" />
+    <Content Include="Views\Test\Details.cshtml" />
+    <Content Include="Views\Test\Edit.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

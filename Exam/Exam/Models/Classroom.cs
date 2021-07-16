@@ -11,6 +11,6 @@ namespace Exam.Models
         [Key]
         public int ClassroomID { get; set; }
         [Required(ErrorMessage = "Please enter the correct Classroom")]
-        public string Name { get; set; }
+        public string ClassroomName { get; set; }
     }
 }

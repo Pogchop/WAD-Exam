@@ -21,6 +21,9 @@
             @Html.DisplayNameFor(model => model.Falculty.Name)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Status.StatusName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Starttime)
         </th>
         <th>
@@ -42,6 +45,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Falculty.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status.StatusName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Starttime)

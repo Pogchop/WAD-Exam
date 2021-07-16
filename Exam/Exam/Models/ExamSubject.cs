@@ -11,6 +11,6 @@ namespace Exam.Models
         [Key]
         public int ExamSubjectID { get; set; }
         [Required (ErrorMessage = "Please enter the right Exam Subject")]
-        public string Name { get; set; }
+        public string SubjectName { get; set; }
     }
 }
